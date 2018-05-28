@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationCacheConfig extends CachingConfigurerSupport {
 
   @Override
-//  @Bean
+  @Bean
   public CacheManager cacheManager() {
     SimpleCacheManager cacheManager = new SimpleCacheManager();
     Cache booksCache = new ConcurrentMapCache("books");
@@ -25,7 +25,6 @@ public class ApplicationCacheConfig extends CachingConfigurerSupport {
   }
 
   @Override
-//  @Bean("customKeyGenerator")
   public KeyGenerator keyGenerator() {
     return new CustomKeyGenerator();
   }
