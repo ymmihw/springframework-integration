@@ -10,7 +10,7 @@ import com.ymmihw.springframework.cache.config.ApplicationCacheConfig;
 import com.ymmihw.springframework.cache.example.BookService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {ApplicationCacheConfig.class},
+@ContextConfiguration(classes = {Application.class, ApplicationCacheConfig.class},
     loader = AnnotationConfigContextLoader.class)
 public class SpringCachingIntegrationTest {
   @Autowired
