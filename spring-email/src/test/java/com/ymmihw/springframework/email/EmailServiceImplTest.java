@@ -4,14 +4,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.mail.MessagingException;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import freemarker.template.TemplateException;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 public class EmailServiceImplTest {
 
@@ -28,29 +25,34 @@ public class EmailServiceImplTest {
 
   @Test
   public void testSendSimpleMessageUsingTemplate() {
-    emailService.sendSimpleMessageUsingTemplate("whimmy@126.com", "SimpleMessageUsingTemplate", "SimpleMessageUsingTemplate");
+    emailService.sendSimpleMessageUsingTemplate("whimmy@126.com", "SimpleMessageUsingTemplate",
+        "SimpleMessageUsingTemplate");
   }
 
   @Test
   public void testSendMessageWithAttachment() {
-    emailService.sendMessageWithAttachment("whimmy@126.com", "MessageWithAttachment", "MessageWithAttachment","attachment.txt");
+    emailService.sendMessageWithAttachment("whimmy@126.com", "MessageWithAttachment",
+        "MessageWithAttachment", "attachment.txt");
   }
-  
+
   @Test
   public void testSendMessageUsingThymeleafTemplate() throws IOException, MessagingException {
-    Map<String,Object> templateModel = new HashMap<>();
+    Map<String, Object> templateModel = new HashMap<>();
     templateModel.put("recipientName", "whimmy");
     templateModel.put("text", "text");
     templateModel.put("senderName", "wang");
-    emailService.sendMessageUsingThymeleafTemplate("whimmy@126.com", "MessageUsingThymeleafTemplate",templateModel);
+    emailService.sendMessageUsingThymeleafTemplate("whimmy@126.com",
+        "MessageUsingThymeleafTemplate", templateModel);
   }
-  
+
   @Test
-  public void testSendMessageUsingFreemarkerTemplate() throws  TemplateException, IOException, MessagingException {
-    Map<String,Object> templateModel = new HashMap<>();
+  public void testSendMessageUsingFreemarkerTemplate()
+      throws TemplateException, IOException, MessagingException {
+    Map<String, Object> templateModel = new HashMap<>();
     templateModel.put("recipientName", "whimmy");
     templateModel.put("text", "text");
     templateModel.put("senderName", "wang");
-    emailService.sendMessageUsingFreemarkerTemplate("whimmy@126.com", "MessageUsingFreemarkerTemplate",templateModel);
+    emailService.sendMessageUsingFreemarkerTemplate("whimmy@126.com",
+        "MessageUsingFreemarkerTemplate", templateModel);
   }
 }

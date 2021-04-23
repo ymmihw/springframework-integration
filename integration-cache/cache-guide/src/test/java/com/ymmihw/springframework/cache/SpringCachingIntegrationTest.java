@@ -1,16 +1,15 @@
 package com.ymmihw.springframework.cache;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import com.ymmihw.springframework.cache.config.CachingConfig;
 import com.ymmihw.springframework.cache.example.Customer;
 import com.ymmihw.springframework.cache.example.CustomerDataService;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest
 @ContextConfiguration(classes = {CachingConfig.class}, loader = AnnotationConfigContextLoader.class)
 public class SpringCachingIntegrationTest {
 
