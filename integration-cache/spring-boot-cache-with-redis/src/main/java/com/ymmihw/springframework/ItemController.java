@@ -16,4 +16,9 @@ public class ItemController {
         return itemService.getItemForId(id);
     }
 
+    @GetMapping("/item/update/{id}")
+    public Item addItem(@PathVariable String id) {
+        return itemService.saveOrUpdate(id);
+    }
+
 }
