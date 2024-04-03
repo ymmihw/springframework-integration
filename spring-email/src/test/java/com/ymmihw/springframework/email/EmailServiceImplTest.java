@@ -1,13 +1,13 @@
 package com.ymmihw.springframework.email;
 
+import freemarker.template.TemplateException;
+import jakarta.mail.MessagingException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import javax.mail.MessagingException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import freemarker.template.TemplateException;
 
 @SpringBootTest(classes = Application.class)
 public class EmailServiceImplTest {

@@ -8,8 +8,9 @@ import static org.mockito.Mockito.verify;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

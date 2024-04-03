@@ -1,8 +1,9 @@
 package com.ymmihw.springframework;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,8 @@ import lombok.Setter;
 @Setter
 public class Customer implements Serializable {
 
-  @Id private String id;
+  @Id
+  private String id;
 
   private String name;
 
