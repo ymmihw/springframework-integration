@@ -3,9 +3,9 @@ package com.ymmihw.springframework.email;
 import java.io.IOException;
 import java.util.Map;
 
-import javax.mail.MessagingException;
 
 import freemarker.template.TemplateException;
+import jakarta.mail.MessagingException;
 
 /**
  * Created by Olga on 8/22/2016.
