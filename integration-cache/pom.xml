@@ -22,5 +22,6 @@
         <module>cache-guide</module>
         <module>cache-custom-keygenerator</module>
         <module>spring-boot-cache-with-redis</module>
+        <module>spring-two-level-cache</module>
     </modules>
 </project>
